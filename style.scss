@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+$font:"Roboto", sans-serif;
+
+@mixin phone {
+    @media (max-width: 768px) {
+        @content
+    }
+ }
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font;
+}
+// Navbar
+header {
+    overflow: hidden;
+    .navbar {
+        position: relative;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        width: 100%;
+        height: 80px;
+        padding: 15px 0px;
+        @include phone {
+            padding: 15px 0;
+        }
+        .menu {
+            position: absolute;
+            right: 30px;
+        }
+        .nav-head {
+            position: absolute;
+            left: 120px;
+            transform: translateX(50px) !important;
+            @include phone {
+                left: -30px !important;
+            }
+            span {
+                font-size: 27px;
+                font-weight: 700;
+            }
+        }
+        .nav-body {
+            position: absolute;
+            position: relative;
+            right: 40px;
+            @include phone {
+                transform: translateY(40px) !important;
+            }
+            ul {
+                position: absolute;
+                right: 130px !important;
+                @include phone {
+                    margin: 0 auto;
+                }
+                li {
+                    margin: 0 5px;
+                    @include phone {
+                        text-align: center;
+                    }
+                }
+            }
+            .first-button {
+                position: absolute;
+                right: -70px;
+                @include phone {
+                    margin: 0 auto;
+                }
+                li {
+                    list-style: none !important;
+                }
+                .dert {
+                    width: 180px;
+                    margin-left: 30px;
+                    background-color: rgb(88, 176, 83) !important;
+                    border: 1px solid rgb(88, 176, 83) !important;
+                    @include phone {
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+    .banner {
+        background-color: rgb(245, 249, 255);
+        border-bottom: 3px solid rgb(192, 198, 213);
+        .tepa {
+            padding: 120px 140px;
+            @include phone {
+                padding: 50px 10px;
+            }
+            p {
+                font-size: 19px;
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+            h1 {
+                font-size: 45px;
+                font-weight: 800;
+                margin-bottom: 30px;
+            }
+            .btn-jon {
+                width: 170px;
+                margin-right: 10px
+            }
+            .btn-joni {
+                width: 170px;
+                margin-left: 10px;
+            }
+        }
+        .forImg {
+            img {
+                width: 100%;;
+            }
+        }
+    }
+}
+.first {
+    overflow: hidden;
+    background-color: rgb(245, 249, 255);
+    padding: 80px 0;
+    .ezma {
+        margin: 0 auto;
+    }
+        .for-imgjon {
+            margin: 0 auto;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: center;
+            img {
+                text-align: center;
+                margin: 0 auto;
+            }
+            }
+            .stick {
+                width: 80px;
+                height: 3px;
+                background-color: tomato;
+                margin: 0 auto;
+                margin-top: 20px;
+            }
+        }
+
+
+.second {
+    padding: 80px 0;
+    background-color: rgb(245, 249, 255);
+    .geg {
+        margin: 0 auto;
+    }
+    .bosh {
+        .btn-cha {
+            padding: 5px 20px;
+            font-size: 20px;
+            font-weight: 600;
+            color: rgb(83, 198, 255);
+            background-color: rgb(232, 232, 232) !important;
+            width: 180px;
+            height: 40px;
+            border: 1px solid rgb(232, 232, 232);
+            margin-bottom: 30px;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 35px;
+            font-weight: 700;
+        }
+        p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    }
+    .second-big {
+        margin-top: 40px;
+        justify-content: space-between;
+        margin-bottom: 80px;
+    }
+    .box-ff {
+        width: 30%;
+        background-color: white;
+        background-image: url(./img/core-img/cards-bg.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 40px 25px;
+        border-radius: 14px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        @include phone {
+            padding: 20px 10px;
+        }
+        img {
+            width: 40px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: rgb(0, 149, 255);
+            font-size: 23px;
+            font-weight: 700;
+        }
+    }
+    .forBigImg {
+        img {
+            width: 100%;
+        }
+    }
+    .forExtra {
+        padding: 20px 25px;
+        .btn-chik {
+            color: rgb(72, 0, 255) !important;
+            background-color: rgb(235, 248, 255);
+            border: 1px solid  rgb(232, 232, 232);
+            width: 180px;
+            height: 45px;
+            display: flex;
+            font-size: 20px;
+            justify-content: center;
+            align-items: center;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+        h1 {
+            color: rgb(72, 0, 255);
+            margin-bottom: 20px;
+        }
+        .but-box {
+            margin-top: 20px;
+            background-color: rgb(72, 0, 255) !important;
+            width: 140px;
+            height: 55px;
+            font-size: 14px;
+            font-weight: 600;
+            color: rgb(213, 213, 213);
+        }
+    }
+    .secondBanner {
+        margin-bottom: 80px;
+    }
+}
+.therd {
+    background-image: url(./img/bg-img/trial-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 0;
+    .therdPhoto {
+        img {
+            width: 100%;
+        }
+    }
+    .therdText {
+        padding: 30px 10px;
+        .big-not {
+            width: 120px;
+            height: 35px;
+            padding: 10px 15px;
+            color: rgb(72, 0, 255);
+            border-radius: 16px;
+            font-size: 15px;
+            font-weight: 600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 17px;
+        }
+        h1 {
+            color: rgb(255, 255, 255);
+            font-size: 35px;
+            font-weight: 800;
+            margin-bottom: 25px;
+        }
+        p {
+            color: #fff; 
+            margin-bottom: 50px;
+        }
+        .join-one {
+            margin: 40px 0;
+            background-color: #ffffff25;
+            border-radius: 40px;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+            padding-top: 20px;
+            padding-left: 30px;
+            padding-bottom: 15px;
+            padding-right: 10px;
+            .yes-big {
+                border-radius: 50px;
+                border: 1px solid rgb(38, 0, 255);
+                margin-bottom: 50px;
+                width: 90%;
+                height: 40px;
+                color: rgb(72, 0, 255);
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include phone {
+                    width: 90%;
+                }
+                i {
+                    color: rgb(72, 0, 255);
+                    text-align: start;
+                    margin-right: 5px;
+                }
+                span {
+                    position: absolute;
+                    left: 10px;
+                }
+            }
+            .girchik {
+                background-color: rgb(72, 0, 255) !important;
+                font-size: 12px;
+                width: 130px;
+                height: 45px;
+            }
+        }
+    }
+}
+.fourth {
+    padding: 80px 0;
+    background-color: rgb(245, 249, 255);
+    .fourth-img {
+        width: 30% !important;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        img {
+            width: 100%;
+            height: 45%;
+        }
+        h1 {
+            color: rgb(28, 28, 28);
+            font-size: 28px;
+            font-weight: 600;
+            margin: 20px 0;
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            font-size: 15px;
+            font-weight: 500;
+            margin: 10px 0;
+        }
+    }
+    .ezma-jon {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .geg {
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+    .gigimon {
+        background-color: white;
+        border-radius: 20px;
+        padding: 20px 15px;
+        margin-bottom: 20px;
+        .really-smallImg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i {
+                font-size: 30px;
+            }
+        .hh {
+            background-color: purple;
+        }
+        .gg {
+            background-color: tomato;
+        }
+        .ff {
+            background-color: rgb(0, 255, 47);
+        }
+        .er {
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .small-text {
+        h1 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+    }
+    .fourthBanner-one {
+        padding: 80px 0;
+        .btn-chikcha {
+            margin-bottom: 20px;
+        }
+    }
+    .girt {
+        margin-bottom: 20px;
+    }
+}
+.fifth {
+    padding: 80px 0;
+    background-color: rgb(204, 221, 255);
+    .bosh {
+        margin: 0 auto;
+    }
+    .bay-bay {
+        margin: 0 auto;
+        margin-bottom: 60px;
+    }
+    .yes-soya {
+        border-radius: 10px;
+        h1 {
+            text-align: center;
+            color: rgb(0, 149, 255);
+            margin-bottom: 20px;
+        }
+        ul {
+            margin: 0 auto;
+            list-style: none;
+            margin-bottom: 20px;
+            li {
+                text-align: center;
+                margin-bottom: 10px;
+            }
+        }
+        h4 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .oxirgi-but {
+            margin: 0 auto;
+            background-color: rgb(72, 0, 255);
+            border-radius: 15px;
+            border: 1px solid rgb(72, 0, 255);
+            width: 100px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    }
+    .no-soya {
+        border-radius: 10px;
+        padding: 20px 0;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        h1 {
+            text-align: center;
+            color: rgb(0, 149, 255);
+            margin-bottom: 20px;
+        }
+        ul {
+            margin: 0 auto;
+            list-style: none;
+            margin-bottom: 20px;
+            li {
+                text-align: center;
+                margin-bottom: 10px;
+            }
+        }
+        h4 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .oxirgi-but {
+            margin: 0 auto;
+            background-color: rgb(72, 0, 255);
+            border-radius: 15px;
+            border: 1px solid rgb(72, 0, 255);
+            width: 100px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    }
+    .ggsd {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
